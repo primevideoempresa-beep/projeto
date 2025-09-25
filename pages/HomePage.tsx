@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Hero } from '../components/Hero';
 import { Services } from '../components/Services';
 import { Plans } from '../components/Plans';
 import { About } from '../components/About';
 import { siteData } from '../data';
+import { ImagePrompt } from '../components/ImagePrompt';
 
 interface HomePageProps {
   onStartCreatingClick: () => void;
@@ -19,6 +19,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStartCreatingClick }) => {
         onStartCreatingClick={onStartCreatingClick}
       />
       <Services services={siteData.services} />
+      <ImagePrompt />
       <Plans plans={siteData.plans} />
       <About about={siteData.about_us} />
     </>
